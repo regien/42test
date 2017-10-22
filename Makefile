@@ -6,7 +6,7 @@
 #    By: gmalpart <gmalpart@estudent.42.us.org      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/09/25 16:22:47 by gmalpart          #+#    #+#              #
-#    Updated: 2017/10/21 20:46:22 by gmalpart         ###   ########.fr        #
+#    Updated: 2017/10/21 20:48:28 by gmalpart         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,8 +29,6 @@ FILES = ft_putchar.c ft_putstr.c ft_strlen.c ft_swap.c ft_strcmp.c ft_putnbr.c \
 
 OBJECTS = $(FILES:.c=.o)
 
-.PHONY: all, clean, fclean, re
-
 all: $(NAME)
 
 $(NAME):
@@ -45,3 +43,5 @@ fclean:	clean
 	@/bin/rm -f $(NAME)
 
 re:		fclean all
+
+.PHONY: all, clean, fclean, re
