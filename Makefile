@@ -6,14 +6,13 @@
 #    By: gmalpart <gmalpart@estudent.42.us.org      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/09/25 16:22:47 by gmalpart          #+#    #+#              #
-#    Updated: 2017/10/21 20:42:13 by gmalpart         ###   ########.fr        #
+#    Updated: 2017/10/21 20:46:22 by gmalpart         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-
+CC = gcc
 FLAGS = -Wall -Wextra -Werror
-
 FILES = ft_putchar.c ft_putstr.c ft_strlen.c ft_swap.c ft_strcmp.c ft_putnbr.c \
 	ft_bzero.c ft_bzero.c ft_memalloc.c ft_memcpy.c ft_memdel.c \
 	ft_memset.c ft_strcpy.c ft_strncpy.c ft_strnew.c ft_strdup.c \
@@ -35,7 +34,7 @@ OBJECTS = $(FILES:.c=.o)
 all: $(NAME)
 
 $(NAME):
-	@gcc $(FLAGS) -c -I. $(FILES)
+	@$(CC) $(FLAGS) -c $(FILES)
 	@ar rc $(NAME) $(OBJECTS)
 	@ranlib libft.a
 
