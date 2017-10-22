@@ -6,13 +6,15 @@
 #    By: gmalpart <gmalpart@estudent.42.us.org      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/09/25 16:22:47 by gmalpart          #+#    #+#              #
-#    Updated: 2017/10/21 20:26:11 by gmalpart         ###   ########.fr        #
+#    Updated: 2017/10/21 20:35:21 by gmalpart         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
 FLAGS = -Wall -Wextra -Werror
+
+OBJECTS = $(FILES:.c=.o)
 
 FILES = ft_putchar.c ft_putstr.c ft_strlen.c ft_swap.c ft_strcmp.c ft_putnbr.c \
 	ft_bzero.c ft_bzero.c ft_memalloc.c ft_memcpy.c ft_memdel.c \
@@ -28,7 +30,6 @@ FILES = ft_putchar.c ft_putstr.c ft_strlen.c ft_swap.c ft_strcmp.c ft_putnbr.c \
 	ft_striter.c ft_striteri.c ft_lstmap.c ft_strmap.c ft_strmapi.c \
 	ft_strjoin.c ft_strsplit.c ft_wordlen.c ft_wordcount.c ft_iswspace.c
 
-OBJECTS = $(FILES:.c=.o)
 
 .PHONY: all, clean, fclean, re
 
